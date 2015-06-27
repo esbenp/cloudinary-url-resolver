@@ -1,0 +1,17 @@
+{
+  "name": "es6-library-boilerplate",
+  "version": "0.1.0",
+  "homepage": "https://github.com/esbenp/es6-library-boilerplate",
+  "main": "index.js",
+  "authors": [
+    "Esben Petersen <esbenspetersen@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
