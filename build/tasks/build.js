@@ -22,10 +22,16 @@ gulp.task('build-amd', function () {
     .pipe(gulp.dest(paths.output + 'amd'));
 });
 
+gulp.task('build-system', function () {
+  return gulp.src(paths.source)
+    .pipe(to5(assign({}, compilerOptions, {modules:'system'})))
+    .pipe(gulp.dest(paths.output + 'system'));
+});
+
 gulp.task('build', function(callback) {
   return runSequence(
     'clean',
-    ['build-es6', 'build-commonjs', 'build-amd'],
+    ['build-es6', 'build-commonjs', 'build-amd', 'build-system'],
     callback
   );
 });
