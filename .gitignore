@@ -3,4 +3,3 @@ node_modules
 bower_components
 build/reports
 jspm_packages
-dist
