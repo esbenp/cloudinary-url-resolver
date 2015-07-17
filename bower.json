@@ -1,7 +1,7 @@
 {
-  "name": "es6-library-boilerplate",
+  "name": "cloudinary-url-resolver",
   "version": "0.1.0",
-  "homepage": "https://github.com/esbenp/es6-library-boilerplate",
+  "homepage": "https://github.com/esbenp/cloudinary-url-resolver",
   "main": "index.js",
   "authors": [
     "Esben Petersen <esbenspetersen@gmail.com>"
