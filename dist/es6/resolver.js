@@ -50,7 +50,9 @@ var buildUrl = function(public_id, parameters, isFile)
 
   url += isFile ? 'raw/upload/' : 'image/upload/';
 
-  url += parameters.join(',') + '/';
+  if (parameters.length > 0) {
+    url += parameters.join(',') + '/';
+  }
 
   url += public_id;
 

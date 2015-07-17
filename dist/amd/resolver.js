@@ -47,7 +47,9 @@ define(['exports', 'module', './parameters'], function (exports, module, _parame
 
     url += isFile ? 'raw/upload/' : 'image/upload/';
 
-    url += parameters.join(',') + '/';
+    if (parameters.length > 0) {
+      url += parameters.join(',') + '/';
+    }
 
     url += public_id;
 
