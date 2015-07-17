@@ -39,6 +39,11 @@ var buildParameters = function buildParameters(options) {
 
 var buildUrl = function buildUrl(public_id, parameters, isFile) {
   var s = resolver.settings;
+
+  if (typeof s.cloud_name !== 'string') {
+    throw new Error(s.cloud_name + ' is not a valid cloud name.');
+  }
+
   var url = s.secure === true ? s.secure_root : s.root;
 
   url += s.cloud_name + '/';
@@ -55,7 +60,7 @@ var buildUrl = function buildUrl(public_id, parameters, isFile) {
 resolver.settings = {
   root: 'http://res.cloudinary.com/',
   secure_root: 'https://res.cloudinary.com/',
-  cloud_name: 'traede',
+  cloud_name: null,
   secure: true
 };
 
