@@ -5,7 +5,7 @@ import {
 
 var resolver = function(public_id, options, isFile) {
   var parameters = isFile ? [] : buildParameters(options);
-  var url = buildUrl(public_id, parameters);
+  var url = buildUrl(public_id, parameters, isFile);
 
   return url;
 };
@@ -36,14 +36,18 @@ var buildParameters = function(options) {
   return parameters;
 }
 
-var buildUrl = function(public_id, parameters)
+var buildUrl = function(public_id, parameters, isFile)
 {
   var s = resolver.settings;
   var url = s.secure === true ? s.secure_root : s.root;
 
   url += s.cloud_name + '/';
 
-  url += parameters.join(',');
+  url += isFile ? 'raw/upload/' : 'image/upload/';
+
+  url += parameters.join(',') + '/';
+
+  url += public_id;
 
   return url;
 }

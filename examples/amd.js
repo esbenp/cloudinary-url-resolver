@@ -7,13 +7,12 @@ requirejs.config({
 });
 
 requirejs(['dist/amd/resolver'], function(resolver){
-  resolver.settings.cloud_name = 'awesomecloud';
+  resolver.settings.cloud_name = 'traede';
   resolver.settings.secure = false;
 
-  console.log(resolver('images/1/1312319103', {
+  console.log(resolver('webshop_landing/1/oqnth76j7pqg24nndluc', {
     height: 100,
     width: 100,
-    crop: 'fill',
-    flags: ['keep_iptc', 'attachment']
+    crop: 'fill'
   }));
 });
