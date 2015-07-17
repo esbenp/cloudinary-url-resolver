@@ -7,12 +7,13 @@ requirejs.config({
 });
 
 requirejs(['dist/amd/resolver'], function(resolver){
+  resolver.settings.cloud_name = 'awesomecloud';
   resolver.settings.secure = false;
 
-  console.log(resolver('images/1/asdasdada', {
+  console.log(resolver('images/1/1312319103', {
     height: 100,
     width: 100,
-    crop: 'fede',
-    flags: ['asdas', 'sadas']
+    crop: 'fill',
+    flags: ['keep_iptc', 'attachment']
   }));
 });
