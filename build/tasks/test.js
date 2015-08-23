@@ -42,8 +42,11 @@ gulp.task('cover', function (done) {
       dir: 'build/reports/coverage'
     }
   }, function (e) {
-    gulp.src('build/reports/**/lcov.info')
-      .pipe(coveralls());
     done();
   });
 });
+
+gulp.task('coveralls', function(){
+  gulp.src('build/reports/**/lcov.info')
+    .pipe(coveralls());
+})
