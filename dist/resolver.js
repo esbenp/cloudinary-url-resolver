@@ -1,5 +1,19 @@
-define(['exports', 'module', './parameters'], function (exports, module, _parameters) {
+(function (global, factory) {
+  if (typeof define === 'function' && define.amd) {
+    define(['exports', './parameters'], factory);
+  } else if (typeof exports !== 'undefined') {
+    factory(exports, require('./parameters'));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports, global.parameters);
+    global.resolver = mod.exports;
+  }
+})(this, function (exports, _parameters) {
   'use strict';
+
+  exports.__esModule = true;
 
   var resolver = function resolver(public_id, options, isFile) {
     var parameters = isFile ? [] : buildParameters(options);
@@ -63,5 +77,9 @@ define(['exports', 'module', './parameters'], function (exports, module, _parame
     secure: true
   };
 
-  module.exports = resolver;
+  exports['default'] = resolver;
+  var buildUrl, buildParameters, resolver;
+  exports.buildUrl = buildUrl;
+  exports.buildParameters = buildParameters;
+  exports.resolver = resolver;
 });
