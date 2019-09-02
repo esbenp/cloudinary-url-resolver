@@ -1,6 +1,6 @@
 {
   "name": "cloudinary-url-resolver",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "",
   "main": "dist/resolver.js",
   "scripts": {
@@ -22,7 +22,7 @@
     "conventional-changelog": "0.0.17",
     "del": "^1.2.0",
     "eslint": "^0.24.0",
-    "gulp": "^3.9.0",
+    "gulp": "^3.9.1",
     "gulp-babel": "^5.1.0",
     "gulp-bump": "^0.3.1",
     "gulp-coveralls": "^0.1.4",
@@ -37,7 +37,7 @@
     "karma-jasmine": "^0.3.5",
     "karma-jspm": "^1.1.5",
     "object.assign": "^3.0.0",
-    "require-dir": "^0.3.0",
+    "require-dir": "^0.3.2",
     "run-sequence": "^1.1.1",
     "systemjs": "^0.18.11",
     "vinyl-paths": "^1.0.0",
