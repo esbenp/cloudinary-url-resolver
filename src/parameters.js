@@ -5,6 +5,7 @@ export var mappings = {
   crop: 'c',
   default_image: 'd',
   density: 'dn',
+  dpr: 'dpr',
   effect: 'e',
   fetch_format: 'f',
   flags: 'fl',
