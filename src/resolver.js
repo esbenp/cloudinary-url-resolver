@@ -1,5 +1,6 @@
 import {
   mappings,
+  join_symbol_override,
   multiple
 } from './parameters';
 
@@ -30,7 +31,9 @@ var buildParameters = function(options) {
       throw new Error(type + ' is not a valid cloudinary parameter.');
     }
 
-    return [mappings[type], value].join('_');
+    var join_symbol = join_symbol_override[type] || '_';
+
+    return [mappings[type], value].join(join_symbol);
   }
 
   for(var i in options) {
