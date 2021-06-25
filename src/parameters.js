@@ -1,6 +1,7 @@
 export var mappings = {
   angle: 'a',
   background: 'b',
+  background_rgb: 'b_rgb',
   border: 'bo',
   crop: 'c',
   default_image: 'd',
@@ -21,6 +22,10 @@ export var mappings = {
   width: 'w',
   x: 'x',
   y: 'y'
+};
+
+export var join_symbol_override = {
+  background_rgb: ':',
 };
 
 export var multiple = {
