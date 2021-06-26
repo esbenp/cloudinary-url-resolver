@@ -1,6 +1,6 @@
 {
   "name": "cloudinary-url-resolver",
-  "version": "2.1.2",
+  "version": "2.2.1",
   "description": "",
   "main": "dist/resolver.js",
   "scripts": {
