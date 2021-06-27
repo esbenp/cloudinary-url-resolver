@@ -30,7 +30,9 @@
         throw new Error(type + ' is not a valid cloudinary parameter.');
       }
 
-      return [_parameters.mappings[type], value].join('_');
+      var join_symbol = _parameters.join_symbol_override[type] || '_';
+
+      return [_parameters.mappings[type], value].join(join_symbol);
     };
 
     for (var i in options) {

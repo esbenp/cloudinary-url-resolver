@@ -1,6 +1,6 @@
 {
   "name": "cloudinary-url-resolver",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/esbenp/cloudinary-url-resolver",
   "main": "index.js",
   "authors": [

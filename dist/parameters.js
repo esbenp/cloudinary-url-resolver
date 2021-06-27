@@ -17,6 +17,7 @@
   var mappings = {
     angle: 'a',
     background: 'b',
+    background_rgb: 'b_rgb',
     border: 'bo',
     crop: 'c',
     default_image: 'd',
@@ -40,6 +41,11 @@
   };
 
   exports.mappings = mappings;
+  var join_symbol_override = {
+    background_rgb: ':'
+  };
+
+  exports.join_symbol_override = join_symbol_override;
   var multiple = {
     flags: true
   };
